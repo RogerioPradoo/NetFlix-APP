@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import Routes from './src/pages/rotas/rotas';
+// import Principal from '../principal/index'
+// import Login from '../login/index';
+// import Inicio from '../inicio/index'
+// import Criar from '../criarConta/index'
+// import Filmes from '../filmes/index'
+// import Series from '../series/index'
+// import Lista from '../lista/index.js'
+// import Contas from '../trocarConta/index'
+// import Recuperar from '../recuperar/index'
+//import { Provider as PaperProvider } from 'react-native-paper'
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <StatusBar backgroundColor="#089b55" barStyle="light-content" />
+      <Routes />
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
